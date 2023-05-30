@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Online Shopping</string>
+    <string name="home">Home</string>
+    <string name="basket">Basket</string>
+    <string name="profile">Profile</string>
+    <string name="to_basket">Savatchaga</string>
+    <string name="in_basket">Savatchada</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="confirm_order">Confirm order</string>
+    <string name="order_value">Order value</string>
+    <string name="phone_number">Phone number</string>
+    <string name="enter_the_phone_number">Enter the phone number</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="next">Next</string>
+    <string name="delivery_method">Delivery method</string>
+    <string name="delivery_address">Delivery address</string>
+    <string name="comment">Comment</string>
+    <string name="add_comment">Add comment</string>
+    <string name="products">Products</string>
+    <string name="error">Error</string>
+    <string name="message">Message</string>
+    <string name="success">Success</string>
+    <string name="yes">Yes</string>
+    <string name="my_orders">My orders</string>
+    <string name="history">History</string>
+    <string name="active">Active</string>
+    <string name="confirm">Confirm</string>
+    <string name="branches">Branches</string>
+    <string name="settings">Settings</string>
+    <string name="service">Services</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="birthday">Birthday</string>
+    <string name="contingency_policy">Contingency policy</string>
+    <string name="language">Language</string>
+    <string name="confirm_code">Confirm code</string>
+    <string name="login">Login</string>
+    <string name="_998">+998</string>
+    <string name="orders">Orders</string>
+    <string name="on_the_way">On the way</string>
+    <string name="delivery">Delivery</string>
+    <string name="nukus">Nukus</string>
+
+
+    <string name="fine_permission_denied_explanation">В разрешении на определение точного местоположения было отказано, но оно необходимо для основных функций.</string>
+    <string name="permission_approved_explanation">Вы одобрили расположение FINE, продолжайте (и нажимайте) дальше!</string>
+    <string name="enable_location">Включить местоположение</string>
+    <string name="location_settings">Включить</string>
+    <string name="enable_location_message">GPS отключен.\nПожалуйста, включите геолокацию</string>
+
+    <string name="confirm_orders_basket">Do you really want to confirm the order?</string>
+    <string name="save">Save</string>
+    <string name="choose_date">Choose date</string>
+    <string name="uzbek">Uzbek</string>
+    <string name="english">English</string>
+
+</resources>

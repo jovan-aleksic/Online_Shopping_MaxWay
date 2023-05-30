@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.MainScreen"
+        android:label="MainScreen"
+        tools:layout="@layout/screen_main">
+        <action
+            android:id="@+id/action_mainScreen_to_searchProductsScreen"
+            app:destination="@id/searchProductsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_productDetailsScreen"
+            app:destination="@id/productDetailsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_profileDetails"
+            app:destination="@id/profileDetails" />
+        <action
+            android:id="@+id/action_mainScreen_to_basketScreen"
+            app:destination="@id/basketScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_branchesScreen"
+            app:destination="@id/branchesScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_settingsScreen"
+            app:destination="@id/settingsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_serviceScreen"
+            app:destination="@id/serviceScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.login.LoginScreen"
+        android:label="LoginScreen"
+        tools:layout="@layout/screen_login">
+        <action
+            android:id="@+id/action_loginScreen_to_passwordCheckoutScreen"
+            app:destination="@id/passwordCheckoutScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordCheckoutScreen"
+        tools:layout="@layout/screen_password_checkout"
+        android:name="uz.gita.online_shopping.presentation.screens.login.checkout_password.PasswordCheckoutScreen"
+        android:label="PasswordCheckoutScreen">
+        <action
+            android:id="@+id/action_passwordCheckoutScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchProductsScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.home.search.SearchProductsScreen"
+        android:label="SearchProductsScreen"
+        tools:layout="@layout/screen_search_products" >
+        <action
+            android:id="@+id/action_searchProductsScreen_to_productDetailsScreen"
+            app:destination="@id/productDetailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.home.details.ProductDetailsScreen"
+        android:label="ProductDetailsScreen"
+        tools:layout="@layout/screen_product_details">
+        <argument
+            android:name="product_count"
+            app:argType="uz.gita.online_shopping.data.models.ProductWithCount" />
+        <action
+            android:id="@+id/action_productDetailsScreen_to_basketScreen"
+            app:destination="@id/basketScreen"
+            app:popUpTo="@id/productDetailsScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderProductsScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.orders.checkout.OrderProductsScreen"
+        android:label="OrderProductsScreen"
+        tools:layout="@layout/screen_order_products" >
+        <action
+            android:id="@+id/action_orderProductsScreen_to_orderMapFragment"
+            app:destination="@id/orderMapFragment" />
+        <action
+            android:id="@+id/action_orderProductsScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetails"
+        android:name="uz.gita.online_shopping.presentation.screens.profile.details.ProfileDetails"
+        android:label="ProfileDetails"
+        tools:layout="@layout/screen_profile_details" />
+    <fragment
+        android:id="@+id/branchesScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.branches.BranchesScreen"
+        android:label="BranchesScreen"
+        tools:layout="@layout/screen_branches" >
+        <action
+            android:id="@+id/action_branchesScreen_to_branchDetailsScreen"
+            app:destination="@id/branchDetailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.service.ServiceScreen"
+        android:label="ServiceScreen"
+        tools:layout="@layout/screen_service" />
+    <fragment
+        android:id="@+id/settingsScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.settings.SettingsScreen"
+        android:label="SettingsScreen"
+        tools:layout="@layout/screen_settings" />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.online_shopping.presentation.screens.splash.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketScreen"
+        tools:layout="@layout/screen_basket"
+        android:name="uz.gita.online_shopping.presentation.screens.basket.BasketScreen"
+        android:label="BasketScreen" >
+        <action
+            android:id="@+id/action_basketScreen_to_orderProductsScreen"
+            app:destination="@id/orderProductsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderMapFragment"
+        tools:layout="@layout/screen_map"
+        android:name="uz.gita.online_shopping.presentation.screens.orders.checkout.map.OrderMapFragment"
+        android:label="OrderMapFragment" />
+    <fragment
+        android:id="@+id/branchDetailsScreen"
+        tools:layout="@layout/screen_branch_details"
+        android:name="uz.gita.online_shopping.presentation.screens.branches.details.BranchDetailsScreen"
+        android:label="BranchDetailsScreen" >
+        <argument
+            android:name="branch_data"
+            app:argType="uz.gita.online_shopping.data.models.BranchData" />
+    </fragment>
+</navigation>
